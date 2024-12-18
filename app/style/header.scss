@@ -1,0 +1,31 @@
+header {
+
+    background-color: white;
+
+    border: #d44dcb 3px solid;
+    border-bottom: #d44dcb 10px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .header-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1400px;
+        padding: 1rem;
+        width: 100%;
+
+        a {
+            margin-left: 1rem;
+
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+
+
+}
