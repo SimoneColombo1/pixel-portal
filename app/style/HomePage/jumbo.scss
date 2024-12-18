@@ -2,23 +2,38 @@
 
 .jumbo-container {
     display: flex;
+    width: 100%;
     justify-content: center;
-    align-items: center;
+    padding: 2rem;
+    width: 100%;
 
     .jumbo {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
 
-
+        border: 3px solid $homeSecondary;
+        width: 40rem;
+        height: 25rem;
+        border-radius: 1rem;
 
         .image {
-            border: 3px solid $homeSecondary;
-
-
+            width: 100%;
+            height: 80%;
+            background-color: aqua;
+            border-radius: 1rem;
         }
 
+        .title {
+            border-top: 4px $homePrimary solid;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 0.4rem;
+            color: beige;
+            font-size: 1.2rem;
+
+        }
 
     }
 }

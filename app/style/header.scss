@@ -5,8 +5,7 @@ header {
     border: #d44dcb 3px solid;
     border-bottom: #d44dcb 10px solid;
     display: flex;
-    align-items: center;
-    justify-content: center;
+
 
     .header-container {
         display: flex;
@@ -17,8 +16,9 @@ header {
         padding: 1rem;
         width: 100%;
 
+
         a {
-            margin-left: 1rem;
+            margin-left: 0.5rem;
 
 
             &:first-child {
