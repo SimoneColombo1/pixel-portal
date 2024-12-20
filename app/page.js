@@ -2,6 +2,7 @@ import Image from "next/image";
 import Jumbo from "./components/HomePage/Jumbo";
 import Header from "./components/HomePage/header";
 import Footer from "./components/HomePage/footer";
+import PrimarySlider from "./components/HomePage/PrimarySlider";
 export default function Home() {
   return (
     <section className="container">
@@ -9,6 +10,7 @@ export default function Home() {
       <main>
         <section className="Main-Container">
           <Jumbo />
+          <PrimarySlider />
         </section>
       </main>
       <Footer></Footer>

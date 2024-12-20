@@ -1,0 +1,13 @@
+@use '../variables.scss' as *;
+
+.primary-slider-container {
+    background-color: $homeBgPrimary;
+
+    .slider {
+        div {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+}
