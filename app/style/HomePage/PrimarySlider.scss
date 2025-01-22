@@ -2,12 +2,35 @@
 
 .primary-slider-container {
     background-color: $homeBgPrimary;
+    overflow: hidden;
 
-    .slider {
-        div {
+    .slider-container {
+        padding: 1rem;
+
+        .slider {
             display: flex;
-            flex-direction: row;
-        }
-    }
+            flex-direction: column;
+            height: 17rem;
 
+            div {
+                display: flex;
+                flex-direction: row;
+
+                width: 80%;
+                height: 100%;
+
+                align-items: center;
+                vertical-align: middle;
+
+
+                .element {
+
+
+                    background-color: blue;
+                }
+
+            }
+        }
+
+    }
 }

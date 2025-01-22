@@ -8,42 +8,42 @@ export default function PrimarySlider() {
     arrows: false,
     dots: false,
     infinite: true,
-    slidesToShow: 5,
+    slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 2000,
+    speed: 3500,
+    autoplaySpeed: 1,
     cssEase: "linear",
   };
   return (
     <section className="primary-slider-container">
       <div className="slider-container">
         <Slider {...settings} className="slider">
-          <div>
-            <h3>1</h3>2 3 4 5 6
+          <div className="element">
+            <h3>1</h3>
           </div>
-          <div>
+          <div className="element">
             <h3>2</h3>
           </div>
-          <div>
+          <div className="element">
             <h3>3</h3>
           </div>
-          <div>
+          <div className="element">
             <h3>4</h3>
           </div>
-          <div>
+          <div className="element">
             <h3>5</h3>
           </div>
-          <div>
+          <div className="element">
             <h3>6</h3>
           </div>
-          <div>
+          <div className="element">
             <h3>6</h3>
           </div>
-          <div>
+          <div className="element">
             <h3>6</h3>
           </div>
-          <div>
+          <div className="element">
             <h3>6</h3>
           </div>
         </Slider>
