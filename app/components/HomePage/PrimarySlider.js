@@ -14,6 +14,7 @@ export default function PrimarySlider() {
     speed: 3500,
     autoplaySpeed: 1,
     cssEase: "linear",
+    pauseOnHover: true,
   };
   return (
     <section className="primary-slider-container">
