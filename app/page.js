@@ -4,6 +4,7 @@ import Header from "./components/HomePage/header";
 import Footer from "./components/HomePage/footer";
 import PrimarySlider from "./components/HomePage/PrimarySlider";
 import PopularSlider from "./components/HomePage/PopularSlider";
+import Search from "./components/HomePage/Search";
 export default function Home() {
   return (
     <section className="container">
@@ -12,6 +13,7 @@ export default function Home() {
         <section className="Main-Container">
           <Jumbo />
           <PrimarySlider />
+          <Search />
           <PopularSlider />
         </section>
       </main>
