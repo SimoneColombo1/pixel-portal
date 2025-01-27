@@ -17,6 +17,7 @@ export default function PrimarySlider() {
   };
   return (
     <section className="primary-slider-container">
+      <h2>New Games</h2>
       <div className="slider-container">
         <Slider {...settings} className="slider">
           <div className="element">

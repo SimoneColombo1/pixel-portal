@@ -1,0 +1,35 @@
+@use '../variables.scss' as *;
+
+
+.Search {
+    display: flex;
+    padding: 6rem;
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        vertical-align: middle;
+        align-items: center;
+        border-radius: 1rem;
+        background-color: $homePrimary;
+        padding: 6rem 0rem;
+
+        .image {
+            display: flex;
+
+            background-color: red;
+            width: 20%;
+            height: 15rem;
+        }
+
+        .paragraph {
+            width: 50%;
+        }
+
+    }
+
+
+
+
+}
