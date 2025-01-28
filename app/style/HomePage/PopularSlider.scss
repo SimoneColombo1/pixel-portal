@@ -1,1 +1,35 @@
 @use '../variables.scss' as *;
+
+.popular-slider {
+    overflow: hidden;
+
+    .slider-container {
+        padding: 1rem;
+
+        .slider {
+            display: flex;
+            flex-direction: column;
+            height: 17rem;
+
+            div {
+                display: flex;
+                flex-direction: row;
+
+                width: 80%;
+                height: 100%;
+
+                align-items: center;
+                vertical-align: middle;
+
+
+                .element {
+
+
+                    background-color: blue;
+                }
+
+            }
+        }
+
+    }
+}
