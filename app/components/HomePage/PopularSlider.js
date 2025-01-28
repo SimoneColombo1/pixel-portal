@@ -15,7 +15,7 @@ export default function PopularSlider() {
     autoplaySpeed: 1,
     cssEase: "linear",
     pauseOnHover: true,
-    direction: "left",
+
     rtl: true,
   };
   return (
