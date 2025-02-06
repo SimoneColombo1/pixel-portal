@@ -15,10 +15,26 @@ export default function PrimarySlider() {
     autoplaySpeed: 1,
     cssEase: "linear",
     pauseOnHover: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2.5,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   return (
     <section className="primary-slider-container">
-      <h2>New Games</h2>
+      <h2 className="title">New Games</h2>
       <div className="slider-container">
         <Slider {...settings} className="slider">
           <div className="element">

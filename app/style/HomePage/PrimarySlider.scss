@@ -1,8 +1,30 @@
 @use '../variables.scss' as *;
 
+@font-face {
+    font-family: 'BrunoAce';
+    src: url('../../../public/fonts/BrunoAce-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BrunoAceSc';
+    src: url('../../../public/fonts/BrunoAceSC-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 .primary-slider-container {
     background-color: $homeBgPrimary;
     overflow: hidden;
+    font-family: 'BrunoAce', sans-serif;
+
+    .title {
+        color: white;
+        font-family: 'BrunoAceSc', sans-serif;
+    }
 
     .slider-container {
         padding: 1rem;
