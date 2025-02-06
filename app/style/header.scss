@@ -60,3 +60,46 @@ header {
 
 
 }
+
+.mobile-menu {
+    margin: 0;
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 1rem;
+}
+
+.desktop-toggle {
+    display: flex;
+}
+
+.mobile-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    header {
+        border-bottom: 6px solid #d44dcb;
+        border-top: #d44dcb 6px solid;
+
+        .header-container {
+            width: 90%;
+
+            .extended-logo {
+                margin-left: 1rem;
+            }
+        }
+
+    }
+
+    .desktop-toggle {
+        display: none;
+    }
+
+    .mobile-toggle {
+        display: flex;
+    }
+}
