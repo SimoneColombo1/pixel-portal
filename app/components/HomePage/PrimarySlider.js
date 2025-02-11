@@ -1,9 +1,30 @@
 "use client";
+import axios from "axios";
 import Slider from "react-slick";
 import Image from "next/image";
-import Style from "../../style/HomePage/PrimarySlider.scss";
 
+import Style from "../../style/HomePage/PrimarySlider.scss";
+import { useEffect, useState } from "react";
 export default function PrimarySlider() {
+  const [games, setGames] = useState([]);
+
+  const getGames = async () => {
+    try {
+      const response = await axios.get(
+        "https://api.rawg.io/api/games?ordering=-released&&key=cf03016e21b1461f974413b5b58a6356&&page=1"
+      );
+
+      console.log(response.data.results);
+      setGames(response.data.results);
+    } catch (error) {
+      console.error("Errore nella richiesta:", error);
+    }
+  };
+
+  useEffect(() => {
+    getGames();
+  }, []);
+
   const settings = {
     arrows: false,
     dots: false,
@@ -37,33 +58,25 @@ export default function PrimarySlider() {
       <h2 className="title">New Games</h2>
       <div className="slider-container">
         <Slider {...settings} className="slider">
-          <div className="element">
-            <h3>1</h3>
-          </div>
-          <div className="element">
-            <h3>2</h3>
-          </div>
-          <div className="element">
-            <h3>3</h3>
-          </div>
-          <div className="element">
-            <h3>4</h3>
-          </div>
-          <div className="element">
-            <h3>5</h3>
-          </div>
-          <div className="element">
-            <h3>6</h3>
-          </div>
-          <div className="element">
-            <h3>6</h3>
-          </div>
-          <div className="element">
-            <h3>6</h3>
-          </div>
-          <div className="element">
-            <h3>6</h3>
-          </div>
+          {games.map((game) => {
+            return (
+              <div key={game.id} className="element">
+                <img
+                  className="image"
+                  src={
+                    game.background_image ||
+                    "../../../public/images/home/leblanc.png"
+                  }
+                  alt={game.name}
+                />
+
+                <p>{game.name} </p>
+                <span className="info">
+                  <p>{game.rating}</p>
+                </span>
+              </div>
+            );
+          })}
         </Slider>
       </div>
     </section>

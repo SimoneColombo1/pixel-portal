@@ -1,9 +1,12 @@
 "use client";
-
+import axios from "axios";
 import Image from "next/image";
 import Style from "../../style/HomePage/PopularSlider.scss";
 import Slider from "react-slick";
+import { useEffect, useState } from "react";
 export default function PopularSlider() {
+  const [games, setGames] = useState([]);
+
   const settings = {
     arrows: false,
     dots: false,

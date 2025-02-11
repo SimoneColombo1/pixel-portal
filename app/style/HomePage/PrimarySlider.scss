@@ -32,7 +32,8 @@
         .slider {
             display: flex;
             flex-direction: column;
-            height: 17rem;
+            height: 20rem;
+
 
             div {
                 display: flex;
@@ -46,10 +47,27 @@
 
 
                 .element {
+                    color: white;
+                    overflow: hidden;
+
+                    .image {
+                        display: flex;
+                        height: 80%;
+                        width: 100%;
+                        border-bottom: 4px solid $homeSecondary;
+                    }
+
+                    .info {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        margin: 0;
+                    }
 
 
-                    background-color: blue;
+                    background-color: $homePrimary ;
                 }
+
 
             }
         }
