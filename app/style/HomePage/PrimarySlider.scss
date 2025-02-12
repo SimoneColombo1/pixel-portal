@@ -50,6 +50,7 @@
                     color: white;
                     overflow: hidden;
 
+
                     .image {
                         display: flex;
                         height: 80%;
@@ -58,10 +59,13 @@
                     }
 
                     .info {
+
                         display: flex;
                         flex-direction: row;
                         justify-content: space-between;
-                        margin: 0;
+                        align-items: baseline;
+
+                        font-size: 0.8rem;
                     }
 
 
@@ -72,5 +76,54 @@
             }
         }
 
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .title {
+        margin-left: 2rem;
+    }
+
+    .primary-slider-container {
+        .slider-container {
+            .slider {
+                div {
+                    height: 96%;
+                    width: 94%;
+                    display: flex;
+                    font-size: 0.8rem;
+
+                    .element {
+                        .info {
+                            font-size: 0.6rem;
+                        }
+                    }
+                }
+
+
+
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .title {
+        margin-left: 2rem;
+    }
+
+    .primary-slider-container {
+        .slider-container {
+            .slider {
+                div {
+
+                    width: 85%;
+
+
+                }
+            }
+        }
     }
 }

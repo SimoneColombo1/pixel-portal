@@ -55,7 +55,7 @@ export default function PrimarySlider() {
   };
   return (
     <section className="primary-slider-container">
-      <h2 className="title">New Games</h2>
+      <h2 className="title">Upcoming Games</h2>
       <div className="slider-container">
         <Slider {...settings} className="slider">
           {games.map((game) => {
@@ -64,15 +64,17 @@ export default function PrimarySlider() {
                 <img
                   className="image"
                   src={
-                    game.background_image ||
-                    "../../../public/images/home/leblanc.png"
+                    game.background_image
+                      ? game.background_image
+                      : "/images/home/image_not_found.jpg"
                   }
                   alt={game.name}
                 />
 
                 <p>{game.name} </p>
                 <span className="info">
-                  <p>{game.rating}</p>
+                  <p>Realese date:</p>
+                  <p>{game.released}</p>
                 </span>
               </div>
             );
