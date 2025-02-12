@@ -11,7 +11,7 @@ export default function PrimarySlider() {
   const getGames = async () => {
     try {
       const response = await axios.get(
-        "https://api.rawg.io/api/games?ordering=-released&&key=cf03016e21b1461f974413b5b58a6356&&page=1"
+        "https://api.rawg.io/api/games?ordering=-released&&key=cf03016e21b1461f974413b5b58a6356&&page=7"
       );
 
       console.log(response.data.results);

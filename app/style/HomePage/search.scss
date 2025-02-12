@@ -1,11 +1,19 @@
 @use '../variables.scss' as *;
 
+@font-face {
+    font-family: 'BrunoAce';
+    src: url('../../../public/fonts/BrunoAce-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
 .Search {
     display: flex;
-    padding: 6rem;
+    padding: 4rem;
 
     .container {
+        padding: 1rem;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -13,18 +21,36 @@
         align-items: center;
         border-radius: 1rem;
         background-color: $homePrimary;
-        padding: 6rem 0rem;
 
-        .image {
-            display: flex;
 
-            background-color: red;
-            width: 20%;
-            height: 15rem;
-        }
+
 
         .paragraph {
-            width: 50%;
+            width: 40%;
+            font-family: 'BrunoAce', sans-serif;
+
+            p {
+                font-size: 2rem;
+
+                color: white;
+            }
+
+            button {
+                margin-top: 2rem;
+                width: 10rem;
+                height: 4rem;
+                border-radius: 2rem;
+                background-color: white;
+                color: $homeSecondary;
+                border: none;
+                font-size: 2rem;
+                font-family: 'BrunoAce', sans-serif;
+
+                &:hover {
+
+                    background-color: lightgray;
+                }
+            }
         }
 
     }
@@ -32,4 +58,45 @@
 
 
 
+}
+
+
+@media(max-width:768px) {
+
+    .desktop_only {
+        display: none;
+    }
+
+    .Search {
+        .container {
+            .paragraph {
+                padding: 2rem;
+                width: 100%;
+            }
+        }
+    }
+
+
+
+}
+
+@media(max-width:576px) {
+
+    .Search {
+        .container {
+            .paragraph {
+                padding: 1rem;
+
+                p {
+                    font-size: 1.5rem;
+                }
+
+                button {
+                    font-size: 1.5rem;
+                    width: 8rem;
+                    height: 3rem;
+                }
+            }
+        }
+    }
 }

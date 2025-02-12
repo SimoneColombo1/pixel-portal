@@ -6,13 +6,18 @@ export default function Search() {
       <div className="container">
         <div className="paragraph">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. In ullam
-            cupiditate, et voluptatibus assumenda amet alias unde, esse
-            temporibus repudiandae incidunt molestiae eaque voluptates. Cum
-            doloribus eum vitae dolorem iure.
+            Search for the game best suited to you in an always updated
+            catalogue
           </p>
+          <button>Search</button>
         </div>
-        <div className="image">IMAGE</div>
+
+        <Image
+          src={"/images/Home/leblanc.png"}
+          width={450}
+          height={400}
+          className="desktop_only"
+        />
       </div>
     </section>
   );
