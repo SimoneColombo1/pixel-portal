@@ -16,6 +16,7 @@ export default function Search() {
           src={"/images/Home/leblanc.png"}
           width={450}
           height={400}
+          alt={"Leblanc"}
           className="desktop_only"
         />
       </div>
