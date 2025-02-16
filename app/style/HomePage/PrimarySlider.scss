@@ -24,16 +24,29 @@
     .title {
         color: white;
         font-family: 'BrunoAceSc', sans-serif;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
     }
 
     .slider-container {
+
+
+        div {
+            width: auto;
+            overflow: visible !important;
+        }
+
         padding: 1rem;
 
         .slider {
+
             display: flex;
             flex-direction: column;
             height: 20rem;
-
+            font-size: clamp(0.8rem, 2vw, 0.4rem);
 
             div {
                 display: flex;
@@ -44,7 +57,7 @@
 
                 align-items: center;
                 vertical-align: middle;
-
+                overflow: hidden;
 
                 .element {
                     color: white;
@@ -64,8 +77,12 @@
                         flex-direction: row;
                         justify-content: space-between;
                         align-items: baseline;
-
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        max-width: 100%;
                         font-size: 0.8rem;
+
                     }
 
 

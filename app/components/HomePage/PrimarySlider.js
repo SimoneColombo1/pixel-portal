@@ -2,7 +2,8 @@
 import axios from "axios";
 import Slider from "react-slick";
 import Image from "next/image";
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Style from "../../style/HomePage/PrimarySlider.scss";
 import { useEffect, useState } from "react";
 export default function PrimarySlider() {

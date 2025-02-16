@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Style from "../../style/HomePage/search.scss";
+
 export default function Search() {
   return (
     <section className="Search">

@@ -1,17 +1,25 @@
 @use '../variables.scss' as *;
 
 .popular-slider {
+
     overflow: hidden;
 
     .slider-container {
         padding: 1rem;
+        overflow: visible !important;
+
+        div {
+            overflow: visible !important;
+        }
 
         .slider {
             display: flex;
             flex-direction: column;
             height: 17rem;
 
+
             div {
+
                 display: flex;
                 flex-direction: row;
 
