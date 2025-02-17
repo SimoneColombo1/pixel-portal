@@ -38,6 +38,14 @@ export default function Jumbo() {
   return (
     <section className="jumbo-container">
       <section className="slider-container">
+        <div className="jumbo-decoration">
+          <Image
+            src={"/images/home/jinx1.png"}
+            alt="Jinx"
+            width={200}
+            height={200}
+          />
+        </div>
         <Slider {...settings} className="slider">
           {news.map((news) => {
             return (

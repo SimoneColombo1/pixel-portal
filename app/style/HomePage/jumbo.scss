@@ -17,6 +17,8 @@
 }
 
 .jumbo-container {
+
+
     display: flex;
     width: 100%;
     justify-content: center;
@@ -128,6 +130,16 @@
         }
 
     }
+
+    .jumbo-decoration {
+        display: flex;
+        position: absolute;
+        top: 10rem;
+
+        left: 13rem;
+        width: 10rem;
+        height: 10rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -136,6 +148,10 @@
             div {
                 width: 35rem;
             }
+        }
+
+        .jumbo-decoration {
+            display: none;
         }
 
         .jumbo {
