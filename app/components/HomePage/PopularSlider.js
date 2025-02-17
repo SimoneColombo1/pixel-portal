@@ -54,6 +54,13 @@ export default function PopularSlider() {
   };
   return (
     <section className="popular-slider">
+      <Image
+        src={"/images/home/pow_pow.png"}
+        alt="pow pow"
+        width={190}
+        height={250}
+        className="decorative-image"
+      />
       <h3 className="title">Top Rated Games</h3>
       <div className="slider-container">
         <Slider {...settings} className="slider">
