@@ -6,6 +6,22 @@ import Slider from "react-slick";
 import { useEffect, useState } from "react";
 export default function PopularSlider() {
   const [games, setGames] = useState([]);
+  const getGames = async () => {
+    try {
+      const response = await axios.get(
+        "https://api.rawg.io/api/games?ordering=-rating&&key=cf03016e21b1461f974413b5b58a6356&&page=1"
+      );
+
+      console.log(response.data.results);
+      setGames(response.data.results);
+    } catch (error) {
+      console.error("Errore nella richiesta:", error);
+    }
+  };
+
+  useEffect(() => {
+    getGames();
+  }, []);
 
   const settings = {
     arrows: false,
@@ -18,41 +34,50 @@ export default function PopularSlider() {
     autoplaySpeed: 1,
     cssEase: "linear",
     pauseOnHover: true,
-
     rtl: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2.5,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   return (
     <section className="popular-slider">
-      <h3>Popular Slider</h3>
+      <h3 className="title">Popular Slider</h3>
       <div className="slider-container">
         <Slider {...settings} className="slider">
-          <div className="element">
-            <h3>1</h3>
-          </div>
-          <div className="element">
-            <h3>2</h3>
-          </div>
-          <div className="element">
-            <h3>3</h3>
-          </div>
-          <div className="element">
-            <h3>4</h3>
-          </div>
-          <div className="element">
-            <h3>5</h3>
-          </div>
-          <div className="element">
-            <h3>6</h3>
-          </div>
-          <div className="element">
-            <h3>6</h3>
-          </div>
-          <div className="element">
-            <h3>6</h3>
-          </div>
-          <div className="element">
-            <h3>6</h3>
-          </div>
+          {games.map((game) => {
+            return (
+              <div key={game.id} className="element">
+                <img
+                  className="image"
+                  src={
+                    game.background_image
+                      ? game.background_image
+                      : "/images/home/image_not_found.jpg"
+                  }
+                  alt={game.name}
+                />
+
+                <p>{game.name} </p>
+                <span className="info">
+                  <p>Realese date:</p>
+                  <p>{game.released}</p>
+                </span>
+              </div>
+            );
+          })}
         </Slider>
       </div>
     </section>
