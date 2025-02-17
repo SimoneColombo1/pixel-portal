@@ -54,7 +54,7 @@ export default function PopularSlider() {
   };
   return (
     <section className="popular-slider">
-      <h3 className="title">Popular Slider</h3>
+      <h3 className="title">Top Rated Games</h3>
       <div className="slider-container">
         <Slider {...settings} className="slider">
           {games.map((game) => {
@@ -72,8 +72,10 @@ export default function PopularSlider() {
 
                 <p>{game.name} </p>
                 <span className="info">
-                  <p>Realese date:</p>
-                  <p>{game.released}</p>
+                  <p>
+                    Rating:
+                    {game.rating}/5
+                  </p>
                 </span>
               </div>
             );
