@@ -1,5 +1,21 @@
 @use '../variables.scss' as *;
 
+@font-face {
+    font-family: 'BrunoAce';
+    src: url('../../../public/fonts/BrunoAce-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BrunoAceSc';
+    src: url('../../../public/fonts/BrunoAceSC-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 .jumbo-container {
     display: flex;
     width: 100%;
@@ -25,15 +41,46 @@
 
             }
 
+            .slick-prev:before,
+            .slick-next:before {
+                content: none;
+
+            }
+
+            .slick-prev,
+            .slick-next {
+
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            .slick-prev {
+                background: url('../../../public/images/Home/left-arrow.png') no-repeat center center;
+                background-size: contain;
+                left: -70px;
+                width: 50px;
+
+                height: 50px;
+            }
+
+            .slick-next {
+                background: url('../../../public/images/Home/right-arrow.png') no-repeat center center;
+                background-size: contain;
+                width: 60px;
+
+                height: 60px;
+                right: -70px;
+            }
         }
     }
 
     .jumbo {
         display: flex;
         flex-direction: column;
+        background-color: $homeSecondary;
 
-        border: 3px solid $homeSecondary;
-        width: 40rem;
+        width: 30rem;
         height: 25rem;
         border-radius: 1rem;
 
@@ -41,13 +88,14 @@
             width: 100%;
             height: 80%;
             background-color: aqua;
-            border-radius: 1rem;
+            border-radius: 1rem 1rem 0rem 0rem;
             overflow: hidden;
 
             img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+
             }
         }
 
@@ -59,17 +107,20 @@
             align-items: center;
             flex-direction: column;
             padding: 0.4rem;
-            color: beige;
+            color: white;
             font-size: 1.2rem;
 
-
+            h1 {
+                font-family: 'BrunoAceSc';
+            }
 
             span {
-
+                font-family: 'BrunoAce';
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 max-width: 100%;
+                font-size: 0.9rem;
 
             }
 
@@ -77,4 +128,61 @@
         }
 
     }
+}
+
+@media (max-width: 768px) {
+    .jumbo-container {
+        .slider {
+            div {
+                width: 35rem;
+            }
+        }
+
+        .jumbo {
+
+            width: 20rem;
+            height: 20rem;
+
+            .title {
+                margin: 0;
+                padding: 0.4rem;
+                font-size: 0.6rem;
+
+
+                h1 {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+
+
+}
+
+@media (max-width: 576px) {
+    .jumbo-container {
+
+
+        .jumbo {
+
+            width: 20rem;
+            height: 15rem;
+
+            .title {
+                margin: 0;
+                padding: 0.4rem;
+
+                span {
+                    display: none;
+                }
+
+
+                h1 {
+                    font-size: 0.6rem;
+                }
+            }
+        }
+    }
+
+
 }
