@@ -12,8 +12,10 @@ footer {
         max-width: 1400px;
         padding: 1rem;
 
+
         .upper-footer {
-            padding: 5rem 0rem;
+            padding: 1rem;
+
             justify-content: space-between;
             display: flex;
             flex-direction: row;
@@ -24,6 +26,7 @@ footer {
                 display: flex;
                 flex-direction: row;
                 justify-content: start;
+                align-items: center;
 
                 ul {
                     text-decoration: none;
@@ -33,26 +36,48 @@ footer {
 
                     li {
                         .links {
+                            position: relative;
                             text-decoration: none;
                             color: $homeSecondary;
                             margin: 0rem;
                             font-size: 1.1rem;
+
+                            &::after {
+
+                                content: "";
+                                position: absolute;
+                                left: 0;
+                                bottom: -2px;
+
+                                width: 0%;
+
+                                height: 2px;
+
+                                background-color: $homeSecondary;
+
+                                transition: width 0.3s ease-in-out;
+
+
+                            }
+
+                            &:hover::after {
+                                width: 100%;
+                            }
                         }
                     }
                 }
             }
 
             .image {
-                display: flex;
+
                 width: 50%;
                 margin: 0;
 
                 span {
-                    display: flex;
                     margin: 0;
-                    margin-left: 26rem;
-                    background-color: blueviolet;
-                    width: 40%;
+
+                    margin-left: 15rem;
+
                     height: 100%;
                 }
             }
@@ -71,4 +96,24 @@ footer {
 
     }
 
+}
+
+
+
+@media (max-width: 768px) {
+
+
+
+    footer {
+        .footer-container {
+            .upper-footer {
+
+
+                .image {
+                    display: none;
+
+                }
+            }
+        }
+    }
 }

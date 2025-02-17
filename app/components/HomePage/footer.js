@@ -63,12 +63,22 @@ export default function Footer() {
           </div>
 
           <div className="image">
-            <span></span>
+            <span>
+              <Image
+                src={"/images/home/jinx_pow_pow.png"}
+                width={450}
+                height={300}
+                alt="jinx"
+              />
+            </span>
           </div>
         </section>
         <hr></hr>
         <section className="lower-footer">
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+          <p>
+            The RAWG API is used on this site. The site is for exhibition and
+            non-commercial purposes
+          </p>
         </section>
       </section>
     </footer>
