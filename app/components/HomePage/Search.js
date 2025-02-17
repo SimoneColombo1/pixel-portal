@@ -4,6 +4,13 @@ import Style from "../../style/HomePage/search.scss";
 export default function Search() {
   return (
     <section className="Search">
+      <Image
+        src={"/images/Home/GetJinxed.png"}
+        width={200}
+        height={200}
+        alt={"get jinxed"}
+        className="SearchDecoration desktop_only"
+      />
       <div className="container">
         <div className="paragraph">
           <p>
