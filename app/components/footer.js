@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import Style from "../../style/HomePage/footer.scss";
+import Style from "../style/HomePage/footer.scss";
 export default function Footer() {
   const footerLinks = [
     { text: "Home", url: "/" },

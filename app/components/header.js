@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
-import "../../style/header.scss";
+import "../style/header.scss";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);

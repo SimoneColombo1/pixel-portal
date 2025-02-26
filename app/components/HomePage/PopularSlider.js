@@ -9,7 +9,7 @@ export default function PopularSlider() {
   const getGames = async () => {
     try {
       const response = await axios.get(
-        "https://api.rawg.io/api/games?ordering=-rating&&key=cf03016e21b1461f974413b5b58a6356&&page=1"
+        "https://api.rawg.io/api/games?metacritic=90,100&&key=cf03016e21b1461f974413b5b58a6356&&page=1"
       );
 
       console.log(response.data.results);
@@ -81,7 +81,7 @@ export default function PopularSlider() {
                 <span className="info">
                   <p>
                     Rating:
-                    {game.rating}/5
+                    {game.metacritic}
                   </p>
                 </span>
               </div>
