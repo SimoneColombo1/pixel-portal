@@ -149,6 +149,8 @@ header {
 
     .header-container {
         background-color: black;
+        border-bottom: 6px solid $SearchPrimary;
+        border-top: $SearchPrimary 6px solid;
 
         .links {
             font-family: 'Castoro', sans-serif;
