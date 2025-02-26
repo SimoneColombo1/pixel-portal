@@ -2,7 +2,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import Style from "../../style/Search/SearchForm.scss";
+
 export default function Search() {
   const [getTitle, setTitle] = useState("");
   const [genre, setGenre] = useState([]);
@@ -41,10 +41,13 @@ export default function Search() {
   const getGames = async () => {
     try {
       const genresString = genre.map((g) => genresList[g]).join(",");
-      const dates = year ? year.replace(",", "-") : "";
-      const metacriticRange = metacritic ? `${metacritic},100` : "";
+      const dates = year ? year.replace(",", "-") : "2020-01-01,2025-12-31";
+      const metacriticRange = metacritic ? `${metacritic},100` : "50,100";
 
-      const url = `https://api.rawg.io/api/games?key=cf03016e21b1461f974413b5b58a6356&page=1&search=${getTitle}&metacritic=${metacriticRange}&dates=${dates}&genres=${genresString}&ordering=-metacritic`;
+      let url = `https://api.rawg.io/api/games?key=cf03016e21b1461f974413b5b58a6356&page=1&ordering=-metacritic&metacritic=${metacriticRange}&dates=${dates}`;
+
+      if (getTitle) url += `&search=${getTitle}`;
+      if (genresString) url += `&genres=${genresString}`;
 
       console.log("API Request URL:", url);
 
@@ -56,6 +59,10 @@ export default function Search() {
       console.error("Errore nella richiesta:", error);
     }
   };
+
+  useEffect(() => {
+    getGames();
+  }, []);
 
   useEffect(() => {
     getGames();
@@ -103,6 +110,19 @@ export default function Search() {
                 </div>
               ))}
             </div>
+          </section>
+
+          <section className="games-list">
+            {games.length > 0 ? (
+              games.map((game) => (
+                <div key={game.id} className="game-card">
+                  <h3>{game.name}</h3>
+                  <p>Metacritic: {game.metacritic || "N/A"}</p>
+                </div>
+              ))
+            ) : (
+              <p>Nessun risultato trovato</p>
+            )}
           </section>
         </section>
       </main>
