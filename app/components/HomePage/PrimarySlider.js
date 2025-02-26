@@ -7,12 +7,30 @@ import "slick-carousel/slick/slick-theme.css";
 import Style from "../../style/HomePage/PrimarySlider.scss";
 import { useEffect, useState } from "react";
 export default function PrimarySlider() {
+  function getUpdatedDates() {
+    const today = new Date();
+
+    const tomorrow = new Date(today);
+    tomorrow.setDate(today.getDate() + 1);
+
+    const nextYear = new Date(today);
+    nextYear.setFullYear(today.getFullYear() + 1);
+
+    const formatDate = (date) => date.toISOString().split("T")[0];
+
+    return {
+      tomorrow: formatDate(tomorrow),
+      nextYear: formatDate(nextYear),
+    };
+  }
+
+  const { tomorrow, nextYear } = getUpdatedDates();
   const [games, setGames] = useState([]);
 
   const getGames = async () => {
     try {
       const response = await axios.get(
-        "https://api.rawg.io/api/games?ordering=-released&&key=cf03016e21b1461f974413b5b58a6356&&page=7"
+        `https://api.rawg.io/api/games?ordering=released&&key=cf03016e21b1461f974413b5b58a6356&&dates=${tomorrow},${nextYear}`
       );
 
       console.log(response.data.results);

@@ -2,7 +2,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-
+import style from "../../style/Search/SearchForm.scss";
 export default function Search() {
   const [getTitle, setTitle] = useState("");
   const [genre, setGenre] = useState([]);
@@ -74,28 +74,35 @@ export default function Search() {
         <section className="Main-Container">
           <section className="search-form">
             <div className="first-search">
-              <input
-                type="text"
-                placeholder="Title"
-                value={getTitle}
-                onChange={FunctionGetTitle}
-              />
-
-              <select onChange={FunctionGetMetacritic}>
-                <option value="">Select Metacritic</option>
-                <option value="100">100</option>
-                <option value="90">90</option>
-                <option value="80">80</option>
-                <option value="70">70</option>
-                <option value="60">60</option>
-              </select>
-
-              <select onChange={FunctionGetYear}>
-                <option value="">Select Year</option>
-                <option value="2025-01-01,2020-12-31">2025-2020</option>
-                <option value="2019-01-01,2000-12-31">2019-2000</option>
-                <option value="1999-01-01,1990-12-31">1999-1990</option>
-              </select>
+              <span className="title">
+                <label>Search by title:</label>
+                <input
+                  type="text"
+                  placeholder="Title"
+                  value={getTitle}
+                  onChange={FunctionGetTitle}
+                />
+              </span>
+              <span className="dropdown">
+                <label>Metacritic Score:</label>
+                <select onChange={FunctionGetMetacritic}>
+                  <option value=""> Select Score</option>
+                  <option value="100">100</option>
+                  <option value="90">90</option>
+                  <option value="80">80</option>
+                  <option value="70">70</option>
+                  <option value="60">60</option>
+                </select>
+              </span>
+              <span className="dropdown">
+                <label>Year Of Realese:</label>
+                <select onChange={FunctionGetYear}>
+                  <option value="">Select Year</option>
+                  <option value="2025-01-01,2020-12-31">2025-2020</option>
+                  <option value="2019-01-01,2000-12-31">2019-2000</option>
+                  <option value="1999-01-01,1990-12-31">1999-1990</option>
+                </select>
+              </span>
             </div>
 
             <div className="genres">
@@ -103,10 +110,14 @@ export default function Search() {
                 <div key={genreName}>
                   <input
                     type="checkbox"
+                    id={genreName}
                     value={genreName}
                     onChange={getGenre}
+                    className="checkbox"
                   />
-                  <label>{genreName}</label>
+                  <label htmlFor={genreName} className="button">
+                    {genreName}
+                  </label>
                 </div>
               ))}
             </div>
