@@ -1,5 +1,6 @@
 "use client";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
@@ -39,15 +40,18 @@ export default function Header() {
         </div>
 
         <nav className="links desktop-toggle">
-          <a href="" className={pathname === "/" ? "active" : ""}>
+          <Link href="/" className={pathname === "/" ? "active" : ""}>
             Home
-          </a>
-          <a href="" className={pathname === "/Pages/Search" ? "active" : ""}>
+          </Link>
+          <Link
+            href="/Pages/Search"
+            className={pathname === "/Pages/Search" ? "active" : ""}
+          >
             Search
-          </a>
-          <a href="" className={pathname === "/Pages/News" ? "active" : ""}>
+          </Link>
+          <Link href="" className={pathname === "/Pages/News" ? "active" : ""}>
             News
-          </a>
+          </Link>
         </nav>
 
         <button

@@ -37,7 +37,7 @@ export default function Footer() {
       ? "/images/Search/Gofrrey.png"
       : "";
   const FooterSizeWidth =
-    pathname === "/" ? " 450 " : pathname === "/Pages/Search" ? "250" : "";
+    pathname === "/" ? "450" : pathname === "/Pages/Search" ? "250" : "";
 
   return (
     <footer
@@ -54,7 +54,7 @@ export default function Footer() {
           <div className="footer-links">
             <ul>
               {footerLinks.map((link) => (
-                <li>
+                <li key={link.url || index}>
                   <Link className="links" href={link.url}>
                     {link.text}
                   </Link>
@@ -64,7 +64,7 @@ export default function Footer() {
 
             <ul>
               {gamingFooterLinks.map((link) => (
-                <li>
+                <li key={link.url || index}>
                   <Link className="links" href={link.url}>
                     {link.text}
                   </Link>
@@ -73,7 +73,7 @@ export default function Footer() {
             </ul>
             <ul>
               {techFooterLinks.map((link) => (
-                <li>
+                <li key={link.url || index}>
                   <Link className="links" href={link.url}>
                     {link.text}
                   </Link>
