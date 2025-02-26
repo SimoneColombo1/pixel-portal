@@ -61,12 +61,16 @@ header {
 
             &:first-child {
                 margin-left: 0;
-                border-bottom: solid 2px white;
+
             }
         }
     }
 
 
+}
+
+.active {
+    border-bottom: solid 2px white;
 }
 
 //>Home

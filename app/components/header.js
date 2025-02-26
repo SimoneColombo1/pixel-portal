@@ -1,5 +1,5 @@
 "use client";
-
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
@@ -7,11 +7,17 @@ import "../style/header.scss";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header
-      className="header 
-    router.pathname ==='/'? header-home  : router.pathname === '/Pages/Search' ? header-search"
+      className={`header ${
+        pathname === "/"
+          ? "header-home"
+          : pathname === "/Pages/Search"
+          ? "header-search"
+          : ""
+      }`}
     >
       <div className="header-container">
         <div className="logo">
@@ -33,9 +39,15 @@ export default function Header() {
         </div>
 
         <nav className="links desktop-toggle">
-          <a href="">Home</a>
-          <a href="">Search</a>
-          <a href="">News</a>
+          <a href="" className={pathname === "/" ? "active" : ""}>
+            Home
+          </a>
+          <a href="" className={pathname === "/Pages/Search" ? "active" : ""}>
+            Search
+          </a>
+          <a href="" className={pathname === "/Pages/News" ? "active" : ""}>
+            News
+          </a>
         </nav>
 
         <button
