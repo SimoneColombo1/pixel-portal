@@ -1,12 +1,10 @@
-@use '../variables.scss' as *;
+@use 'variables.scss' as *;
 
 footer {
     background-color: #172029;
-    border-top: 4px solid $homePrimary;
 
-    hr {
-        color: $homePrimary;
-    }
+
+
 
     .footer-container {
         max-width: 1400px;
@@ -38,7 +36,7 @@ footer {
                         .links {
                             position: relative;
                             text-decoration: none;
-                            color: $homeSecondary;
+
                             margin: 0rem;
                             font-size: 1.1rem;
 
@@ -53,7 +51,7 @@ footer {
 
                                 height: 2px;
 
-                                background-color: $homeSecondary;
+
 
                                 transition: width 0.3s ease-in-out;
 
@@ -98,6 +96,44 @@ footer {
 
 }
 
+//<Home
+.footer-home {
+
+    border-top: 4px solid $homePrimary;
+
+    hr {
+        color: $homePrimary;
+    }
+
+    .links {
+        color: $homeSecondary;
+
+        &::after {
+            background-color: $homeSecondary;
+        }
+    }
+
+
+}
+
+//> 
+.footer-search {
+
+    border-top: 4px solid $SearchPrimary;
+
+    hr {
+        color: $SearchPrimary;
+    }
+
+    .links {
+        color: $SearchPrimary;
+
+        &::after {
+            background-color: $SearchPrimary;
+        }
+    }
+
+}
 
 
 @media (max-width: 768px) {

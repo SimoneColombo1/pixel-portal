@@ -120,6 +120,11 @@ header {
             border-top: #d44dcb 6px solid;
         }
 
+        .header-search {
+            border-bottom: 6px solid $SearchPrimary;
+            border-top: $SearchPrimary 6px solid;
+        }
+
         .header-container {
             width: 90%;
 
@@ -149,8 +154,8 @@ header {
 
     .header-container {
         background-color: black;
-        border-bottom: 6px solid $SearchPrimary;
-        border-top: $SearchPrimary 6px solid;
+        border-bottom: 4px solid $SearchPrimary;
+        border-top: $SearchPrimary 4px solid;
 
         .links {
             font-family: 'Castoro', sans-serif;

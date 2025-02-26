@@ -1,8 +1,10 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-
-import Style from "../style/HomePage/footer.scss";
+import { usePathname } from "next/navigation";
+import Style from "../style/footer.scss";
 export default function Footer() {
+  const pathname = usePathname();
   const footerLinks = [
     { text: "Home", url: "/" },
     { text: "About Us", url: "/about-us" },
@@ -27,8 +29,26 @@ export default function Footer() {
     { text: "Careers", url: "/careers" },
     { text: "Contact Us", url: "/contact-us" },
   ];
+
+  const FooterImage =
+    pathname === "/"
+      ? "/images/Home/jinx_pow_pow.png"
+      : pathname === "/Pages/Search"
+      ? "/images/Search/Gofrrey.png"
+      : "";
+  const FooterSizeWidth =
+    pathname === "/" ? " 450 " : pathname === "/Pages/Search" ? "250" : "";
+
   return (
-    <footer>
+    <footer
+      className={`footer ${
+        pathname === "/"
+          ? "footer-home"
+          : pathname === "/Pages/Search"
+          ? "footer-search"
+          : ""
+      }`}
+    >
       <section className="footer-container">
         <section className="upper-footer">
           <div className="footer-links">
@@ -65,8 +85,8 @@ export default function Footer() {
           <div className="image">
             <span>
               <Image
-                src={"/images/home/jinx_pow_pow.png"}
-                width={450}
+                src={FooterImage}
+                width={FooterSizeWidth}
                 height={300}
                 alt="jinx"
               />
