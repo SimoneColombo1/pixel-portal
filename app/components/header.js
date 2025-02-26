@@ -9,7 +9,10 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="header">
+    <header
+      className="header 
+    router.pathname ==='/'? header-home  : router.pathname === '/Pages/Search' ? header-search"
+    >
       <div className="header-container">
         <div className="logo">
           <Image
