@@ -106,20 +106,23 @@ export default function Search() {
             </div>
 
             <div className="genres">
-              {Object.keys(genresList).map((genreName) => (
-                <div key={genreName}>
-                  <input
-                    type="checkbox"
-                    id={genreName}
-                    value={genreName}
-                    onChange={getGenre}
-                    className="checkbox"
-                  />
-                  <label htmlFor={genreName} className="button">
-                    {genreName}
-                  </label>
-                </div>
-              ))}
+              <p>Genres:</p>
+              <div>
+                {Object.keys(genresList).map((genreName) => (
+                  <div key={genreName}>
+                    <input
+                      type="checkbox"
+                      id={genreName}
+                      value={genreName}
+                      onChange={getGenre}
+                      className="checkbox"
+                    />
+                    <label htmlFor={genreName} className="button">
+                      {genreName}
+                    </label>
+                  </div>
+                ))}
+              </div>
             </div>
           </section>
 

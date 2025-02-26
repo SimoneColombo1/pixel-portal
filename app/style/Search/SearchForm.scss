@@ -62,37 +62,42 @@
     }
 
     .genres {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
         width: 80%;
+        margin-top: 1rem;
 
-        .checkbox {
-            display: none;
+        div {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
 
-        }
 
-        .button {
-            padding: 10px 20px;
-            margin: 1rem;
-            background-color: #D9D9D9;
-            color: black;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            display: inline-block;
-            text-align: center;
-            font-size: 16px;
-            transition: background-color 0.3s ease;
-        }
+            .checkbox {
+                display: none;
 
-        .checkbox:checked+.button {
-            opacity: 60%;
+            }
 
-        }
+            .button {
+                padding: 10px 20px;
+                margin: 1rem;
+                background-color: #D9D9D9;
+                color: black;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                display: inline-block;
+                text-align: center;
+                font-size: 16px;
+                transition: background-color 0.3s ease;
+            }
 
-        .button:hover {
-            opacity: 80%;
+            .checkbox:checked+.button {
+                opacity: 60%;
+
+            }
+
+            .button:hover {
+                opacity: 80%;
+            }
         }
     }
 }
