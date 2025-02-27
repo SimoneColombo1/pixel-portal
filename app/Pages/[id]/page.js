@@ -11,7 +11,7 @@ export default function SingleGamePage() {
   const [game, setGame] = useState(null);
   const [screenshots, setScreenshots] = useState([]);
   const [loading, setLoading] = useState(true);
-
+  const pathname = usePathname();
   useEffect(() => {
     const fetchGameData = async () => {
       if (!id) return;
@@ -35,18 +35,18 @@ export default function SingleGamePage() {
 
     fetchGameData();
   }, [id]);
-
+  if (loading || !game || !screenshots.length) {
+    return <p>Loading...</p>;
+  }
   if (loading) {
     return <p>Loading...</p>;
   }
-
-  const pathname = usePathname();
 
   return (
     <section className="container">
       <main className={pathname === "/" ? "home" : "Search"}>
         <section className="game-main">
-          <Screenshots screenshots={screenshots} />
+          <Screenshots key={screenshots.length} screenshots={screenshots} />
           <Content game={game} />
         </section>
       </main>
