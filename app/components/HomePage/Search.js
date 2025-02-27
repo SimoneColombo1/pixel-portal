@@ -3,7 +3,7 @@ import Style from "../../style/HomePage/search.scss";
 
 export default function Search() {
   return (
-    <section className="Search">
+    <section className="search-section">
       <Image
         src={"/images/Home/GetJinxed.png"}
         width={200}

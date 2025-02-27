@@ -3,6 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import style from "../../style/Search/SearchForm.scss";
+import "../../style/Search/Games-cards.scss";
 export default function Search() {
   const [getTitle, setTitle] = useState("");
   const [genre, setGenre] = useState([]);
@@ -44,7 +45,7 @@ export default function Search() {
       const dates = year ? year.replace(",", "-") : "2020-01-01,2025-12-31";
       const metacriticRange = metacritic ? `${metacritic},100` : "50,100";
 
-      let url = `https://api.rawg.io/api/games?key=cf03016e21b1461f974413b5b58a6356&page=1&ordering=-metacritic&metacritic=${metacriticRange}&dates=${dates}`;
+      let url = `https://api.rawg.io/api/games?key=cf03016e21b1461f974413b5b58a6356&metacritic=${metacriticRange}&dates=${dates}&oredering=-metacritic`;
 
       if (getTitle) url += `&search=${getTitle}`;
       if (genresString) url += `&genres=${genresString}`;
@@ -92,6 +93,7 @@ export default function Search() {
                   <option value="80">80</option>
                   <option value="70">70</option>
                   <option value="60">60</option>
+                  <option value="50">50</option>
                 </select>
               </span>
               <span className="dropdown">
@@ -130,12 +132,36 @@ export default function Search() {
             {games.length > 0 ? (
               games.map((game) => (
                 <div key={game.id} className="game-card">
-                  <h3>{game.name}</h3>
-                  <p>Metacritic: {game.metacritic || "N/A"}</p>
+                  <img
+                    src={game.background_image}
+                    alt={game.name}
+                    className="image"
+                  />
+
+                  <div>
+                    <h3>{game.name}</h3>
+                    <span>
+                      Metacritic:{" "}
+                      <p
+                        className={`vote ${
+                          game.metacritic >= 80
+                            ? "high-score"
+                            : game.metacritic >= 50
+                            ? "medium-score"
+                            : "low-score"
+                        }`}
+                      >
+                        {game.metacritic || "N/A"}
+                      </p>
+                    </span>
+                    <p>
+                      Genres:{game.genres.map((genre) => genre.name).join(", ")}
+                    </p>
+                  </div>
                 </div>
               ))
             ) : (
-              <p>Nessun risultato trovato</p>
+              <p>No results</p>
             )}
           </section>
         </section>
