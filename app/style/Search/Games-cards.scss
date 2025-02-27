@@ -15,7 +15,7 @@
     flex-direction: row;
     width: 100%;
     flex-wrap: wrap;
-
+    justify-content: center;
     align-items: center;
     vertical-align: middle;
 
@@ -28,17 +28,21 @@
 
         .high-score {
             color: #007e4f;
+
+        }
+
+        .vote {
             font-size: 1.5rem;
         }
 
         .medium-score {
             color: yellow;
-            font-size: 1.5rem;
+
         }
 
         low-score {
             color: red;
-            font-size: 1.5rem;
+
         }
 
         .image {
@@ -54,5 +58,40 @@
             opacity: 70%;
         }
     }
+
+}
+
+
+@media (max-width: 768px) {
+    .games-list {
+        .game-card {
+            width: 40%;
+            height: 23rem;
+            font-size: 1rem;
+
+            .vote {
+                font-size: 1rem;
+            }
+
+        }
+    }
+
+
+}
+
+@media (max-width: 576px) {
+    .games-list {
+        .game-card {
+            width: 80%;
+            height: 23rem;
+            font-size: 1rem;
+
+            .vote {
+                font-size: 1rem;
+            }
+
+        }
+    }
+
 
 }
