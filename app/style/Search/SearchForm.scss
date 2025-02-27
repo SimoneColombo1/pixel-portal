@@ -9,6 +9,7 @@
 }
 
 .search-form {
+    max-width: 1400px;
     padding: 1rem;
     background-color: $SearchPrimary;
     width: 80%;
@@ -17,7 +18,7 @@
     flex-direction: column;
     font-family: 'Castoro', serif;
     color: white;
-
+    margin-bottom: 4rem;
     margin-top: 3rem;
 
     .first-search {

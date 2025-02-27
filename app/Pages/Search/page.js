@@ -73,7 +73,7 @@ export default function Search() {
   return (
     <section className="container">
       <main className={usePathname() === "/" ? "home" : "Search"}>
-        <section className="Main-Container">
+        <section className="search-main-Container">
           <section className="search-form">
             <div className="first-search">
               <span className="title">
@@ -128,46 +128,48 @@ export default function Search() {
               </div>
             </div>
           </section>
+          <section className="games-container">
+            <section className="games-list">
+              {games.length > 0 ? (
+                games.map((game) => (
+                  <Link
+                    href={`/Pages/${game.id}`}
+                    key={game.id}
+                    className="game-card"
+                  >
+                    <img
+                      src={game.background_image}
+                      alt={game.name}
+                      className="image"
+                    />
 
-          <section className="games-list">
-            {games.length > 0 ? (
-              games.map((game) => (
-                <Link
-                  href={`/Pages/${game.id}`}
-                  key={game.id}
-                  className="game-card"
-                >
-                  <img
-                    src={game.background_image}
-                    alt={game.name}
-                    className="image"
-                  />
-
-                  <div>
-                    <h3>{game.name}</h3>
-                    <span>
-                      Metacritic:{" "}
-                      <p
-                        className={`vote ${
-                          game.metacritic >= 80
-                            ? "high-score"
-                            : game.metacritic >= 50
-                            ? "medium-score"
-                            : "low-score"
-                        }`}
-                      >
-                        {game.metacritic || "N/A"}
+                    <div>
+                      <h3>{game.name}</h3>
+                      <span>
+                        Metacritic:{" "}
+                        <p
+                          className={`vote ${
+                            game.metacritic >= 80
+                              ? "high-score"
+                              : game.metacritic >= 50
+                              ? "medium-score"
+                              : "low-score"
+                          }`}
+                        >
+                          {game.metacritic || "N/A"}
+                        </p>
+                      </span>
+                      <p>
+                        Genres:
+                        {game.genres.map((genre) => genre.name).join(", ")}
                       </p>
-                    </span>
-                    <p>
-                      Genres:{game.genres.map((genre) => genre.name).join(", ")}
-                    </p>
-                  </div>
-                </Link>
-              ))
-            ) : (
-              <p>No results</p>
-            )}
+                    </div>
+                  </Link>
+                ))
+              ) : (
+                <p>No results</p>
+              )}
+            </section>
           </section>
         </section>
       </main>

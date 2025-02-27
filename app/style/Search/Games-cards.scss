@@ -8,8 +8,18 @@
     font-display: swap;
 }
 
+.games-container {
+    background-image: url('../../../public/images/Search/background.webp');
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100vw;
+}
+
 .games-list {
 
+    max-width: 1400px;
+    background-attachment: fixed;
+    background-size: cover;
     font-family: "Mantinia", sans-serif;
     padding-top: 3rem;
     display: flex;

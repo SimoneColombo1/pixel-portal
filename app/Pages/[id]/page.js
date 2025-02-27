@@ -1,11 +1,11 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { usePathname } from "next/navigation";
+import { usePathname, useParams } from "next/navigation";
 import axios from "axios";
 
-export default function SingleGamePage({ params }) {
-  const { id } = params;
+export default function SingleGamePage() {
+  const { id } = useParams();
   const [game, setGame] = useState(null);
   const [loading, setLoading] = useState(true);
 
