@@ -35,9 +35,9 @@ export default function Footer() {
       ? "/images/Home/jinx_pow_pow.png"
       : pathname === "/Pages/Search"
       ? "/images/Search/Gofrrey.png"
-      : "";
+      : "/images/Search/Gofrrey.png";
   const FooterSizeWidth =
-    pathname === "/" ? "450" : pathname === "/Pages/Search" ? "250" : "";
+    pathname === "/" ? "450" : pathname === "/Pages/Search" ? "250" : "250";
 
   return (
     <footer
@@ -46,7 +46,7 @@ export default function Footer() {
           ? "footer-home"
           : pathname === "/Pages/Search"
           ? "footer-search"
-          : ""
+          : "footer-search"
       }`}
     >
       <section className="footer-container">

@@ -17,7 +17,7 @@ export default function Header() {
           ? "header-home"
           : pathname === "/Pages/Search"
           ? "header-search"
-          : ""
+          : "header-search"
       }`}
     >
       <div className="header-container">

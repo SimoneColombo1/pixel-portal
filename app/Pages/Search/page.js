@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
@@ -16,7 +17,7 @@ export default function Search() {
     Action: 4,
     Indie: 51,
     RPG: 5,
-    "Massively multiplayer": 59,
+    MMO: 59,
     Racing: 1,
     Adventure: 3,
     Arcade: 11,
@@ -131,7 +132,11 @@ export default function Search() {
           <section className="games-list">
             {games.length > 0 ? (
               games.map((game) => (
-                <div key={game.id} className="game-card">
+                <Link
+                  href={`/Pages/${game.id}`}
+                  key={game.id}
+                  className="game-card"
+                >
                   <img
                     src={game.background_image}
                     alt={game.name}
@@ -158,7 +163,7 @@ export default function Search() {
                       Genres:{game.genres.map((genre) => genre.name).join(", ")}
                     </p>
                   </div>
-                </div>
+                </Link>
               ))
             ) : (
               <p>No results</p>
