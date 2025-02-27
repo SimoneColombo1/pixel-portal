@@ -19,6 +19,15 @@
 .popular-slider {
     overflow: hidden;
     font-family: 'BrunoAce', sans-serif;
+    background-image: url("../../../public/images/Home/background2.jpeg");
+    padding: 2rem;
+    background-size: cover;
+    background-attachment: fixed;
+
+    .container {
+        max-width: 1400px;
+        overflow: hidden;
+    }
 
     .title {
         color: white;
@@ -85,11 +94,15 @@
 .decorative-image {
     position: absolute;
     display: flex;
-    top: 95rem;
+    top: 104rem;
     left: 1rem;
 }
 
 @media (max-width: 768px) {
+    .popular-slider {
+        background-image: none;
+    }
+
     .decorative-image {
         display: none;
     }

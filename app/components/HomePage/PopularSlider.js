@@ -54,41 +54,43 @@ export default function PopularSlider() {
   };
   return (
     <section className="popular-slider">
-      <Image
-        src={"/images/home/pow_pow.png"}
-        alt="pow pow"
-        width={190}
-        height={250}
-        className="decorative-image"
-      />
-      <h3 className="title">Top Rated Games</h3>
-      <div className="slider-container">
-        <Slider {...settings} className="slider">
-          {games.map((game) => {
-            return (
-              <div key={game.id} className="element">
-                <img
-                  className="image"
-                  src={
-                    game.background_image
-                      ? game.background_image
-                      : "/images/home/image_not_found.jpg"
-                  }
-                  alt={game.name}
-                />
+      <section className="container">
+        <Image
+          src={"/images/home/pow_pow.png"}
+          alt="pow pow"
+          width={190}
+          height={250}
+          className="decorative-image"
+        />
+        <h3 className="title">Top Rated Games</h3>
+        <div className="slider-container">
+          <Slider {...settings} className="slider">
+            {games.map((game) => {
+              return (
+                <div key={game.id} className="element">
+                  <img
+                    className="image"
+                    src={
+                      game.background_image
+                        ? game.background_image
+                        : "/images/home/image_not_found.jpg"
+                    }
+                    alt={game.name}
+                  />
 
-                <p>{game.name} </p>
-                <span className="info">
-                  <p>
-                    Rating:
-                    {game.metacritic}
-                  </p>
-                </span>
-              </div>
-            );
-          })}
-        </Slider>
-      </div>
+                  <p>{game.name} </p>
+                  <span className="info">
+                    <p>
+                      Rating:
+                      {game.metacritic}
+                    </p>
+                  </span>
+                </div>
+              );
+            })}
+          </Slider>
+        </div>
+      </section>
     </section>
   );
 }

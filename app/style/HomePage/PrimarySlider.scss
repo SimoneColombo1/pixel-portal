@@ -17,9 +17,18 @@
 }
 
 .primary-slider-container {
+    padding: 2rem;
     background-color: $homeBgPrimary;
     overflow: hidden;
     font-family: 'BrunoAce', sans-serif;
+    background-image: url("../../../public/images/Home/homeWallpaper.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+
+    .container {
+        max-width: 1400px;
+        overflow: hidden;
+    }
 
     .title {
         color: white;
@@ -104,6 +113,8 @@
     }
 
     .primary-slider-container {
+        background-image: none;
+
         .slider-container {
             .slider {
                 div {

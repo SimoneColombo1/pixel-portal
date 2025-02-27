@@ -74,32 +74,34 @@ export default function PrimarySlider() {
   };
   return (
     <section className="primary-slider-container">
-      <h2 className="title">Upcoming Games</h2>
-      <div className="slider-container">
-        <Slider {...settings} className="slider">
-          {games.map((game) => {
-            return (
-              <div key={game.id} className="element">
-                <img
-                  className="image"
-                  src={
-                    game.background_image
-                      ? game.background_image
-                      : "/images/home/image_not_found.jpg"
-                  }
-                  alt={game.name}
-                />
+      <section className="container">
+        <h2 className="title">Upcoming Games</h2>
+        <div className="slider-container">
+          <Slider {...settings} className="slider">
+            {games.map((game) => {
+              return (
+                <div key={game.id} className="element">
+                  <img
+                    className="image"
+                    src={
+                      game.background_image
+                        ? game.background_image
+                        : "/images/home/image_not_found.jpg"
+                    }
+                    alt={game.name}
+                  />
 
-                <p>{game.name} </p>
-                <span className="info">
-                  <p>Realese date:</p>
-                  <p>{game.released}</p>
-                </span>
-              </div>
-            );
-          })}
-        </Slider>
-      </div>
+                  <p>{game.name} </p>
+                  <span className="info">
+                    <p>Realese date:</p>
+                    <p>{game.released}</p>
+                  </span>
+                </div>
+              );
+            })}
+          </Slider>
+        </div>
+      </section>
     </section>
   );
 }

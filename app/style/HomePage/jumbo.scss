@@ -18,7 +18,7 @@
 
 .jumbo-container {
 
-
+    max-width: 1400px;
     display: flex;
     width: 100%;
     justify-content: center;
@@ -148,6 +148,15 @@
             div {
                 width: 35rem;
             }
+        }
+
+        .slick-prev {
+            display: none !important;
+
+        }
+
+        .slick-next {
+            display: none !important;
         }
 
         .jumbo-decoration {

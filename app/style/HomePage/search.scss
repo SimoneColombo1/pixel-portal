@@ -8,12 +8,19 @@
     font-display: swap;
 }
 
+
+
 .search-section {
     display: flex;
     padding: 4rem;
+    width: 100%;
 
+    background-size: cover;
+    background-attachment: fixed;
 
-
+    .container {
+        max-width: 1400px;
+    }
 
     .SearchDecoration {
         position: absolute;
@@ -73,14 +80,21 @@
 
 @media(max-width:768px) {
 
-
     .desktop_only {
         display: none;
     }
 
-    .Search {
+
+
+    .search-section {
+
+        background-image: none;
+
+
         .SearchDecoration {
             display: none;
+
+
         }
 
         .container {

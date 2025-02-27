@@ -4,14 +4,15 @@ import Style from "../../style/HomePage/search.scss";
 export default function Search() {
   return (
     <section className="search-section">
-      <Image
-        src={"/images/Home/GetJinxed.png"}
-        width={200}
-        height={200}
-        alt={"get jinxed"}
-        className="SearchDecoration desktop_only"
-      />
       <div className="container">
+        <Image
+          src={"/images/Home/GetJinxed.png"}
+          width={200}
+          height={200}
+          alt={"get jinxed"}
+          className="SearchDecoration"
+        />
+
         <div className="paragraph">
           <p>
             Search for the game best suited to you in an always updated
