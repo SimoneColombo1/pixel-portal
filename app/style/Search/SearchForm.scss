@@ -101,3 +101,39 @@
         }
     }
 }
+
+
+@media (max-width: 768px) {
+    .search-form {
+        width: 90%;
+
+        .first-search {
+            input {
+                width: 50%;
+            }
+
+            .dropdown {
+                width: 30%;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .search-form {
+        width: 90%;
+
+        .first-search {
+            font-size: 0.8rem;
+
+            input {
+                width: 40%;
+            }
+
+            .dropdown {
+
+                width: 40%;
+            }
+        }
+    }
+}
