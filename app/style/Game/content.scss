@@ -9,34 +9,92 @@
 }
 
 .content-container {
-
     display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
 
-    .title {
-        width: 80%;
-        background-color: $SearchPrimary;
-        padding: 0.3rem;
-    }
-
-    .content {
-        background-color: $SearchPrimary;
-        width: 80%;
-        margin-top: 2rem;
-        padding: 1rem;
+    .container {
+        font-family: "mantinia", sans-serif;
         display: flex;
         flex-direction: column;
+        padding: 2rem;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
 
-        .platforms {
-            margin-left: 0.3rem;
-        }
-
-        span {
+        .title {
             width: 100%;
-            margin-top: 1rem;
+            background-color: $SearchPrimary;
+            padding: 0.3rem;
         }
+
+        .content {
+            background-color: $SearchPrimary;
+            width: 100%;
+            margin-top: 2rem;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+
+            .platforms {
+                margin-left: 0.3rem;
+            }
+
+            .achievements {
+                display: flex;
+
+                vertical-align: middle;
+
+
+                img {
+                    margin: 0;
+                }
+            }
+
+            .website {
+                a {
+                    position: relative;
+                    text-decoration: none;
+                    font-size: 1rem;
+                    margin: 0rem;
+                    color: rebeccapurple;
+
+                    &::after {
+
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: -2px;
+
+                        width: 0%;
+
+                        height: 2px;
+
+                        background-color: rebeccapurple;
+
+                        transition: width 0.3s ease-in-out;
+
+
+                    }
+
+                    &:hover::after {
+                        width: 100%;
+                    }
+                }
+            }
+
+            span {
+                width: 100%;
+                margin-top: 1rem;
+            }
+        }
+    }
+}
+
+
+
+@media(max-width: 768px) {
+    .desktop_only {
+        display: none;
     }
 }

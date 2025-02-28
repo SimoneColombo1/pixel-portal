@@ -1,7 +1,7 @@
 .screenshots-container {
     display: flex;
     width: 100%;
-    padding: 4rem;
+    padding: 2rem;
 
     .slick-slider {
         width: 100%;
@@ -75,6 +75,8 @@
 
 @media(max-width: 768px) {
     .screenshots-container {
+        height: 20rem;
+
         .slider {
 
             .slick-prev {
@@ -85,5 +87,13 @@
                 display: none !important;
             }
         }
+    }
+}
+
+@media(max-width: 576px) {
+    .screenshots-container {
+        height: 15rem;
+
+
     }
 }
