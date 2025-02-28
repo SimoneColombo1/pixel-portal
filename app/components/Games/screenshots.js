@@ -18,6 +18,7 @@ export default function Screenshots({ screenshots }) {
     infinite: true,
     speed: 500,
     slidesToShow: 1,
+    autoplay: true,
     initialSlide: 0,
     slidesToScroll: 1,
     responsive: [

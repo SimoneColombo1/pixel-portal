@@ -1,0 +1,42 @@
+@use '../variables.scss' as *;
+
+@font-face {
+    font-family: 'Mantinia';
+    src: url('../../../public/fonts/Mantinia.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.content-container {
+
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+
+    .title {
+        width: 80%;
+        background-color: $SearchPrimary;
+        padding: 0.3rem;
+    }
+
+    .content {
+        background-color: $SearchPrimary;
+        width: 80%;
+        margin-top: 2rem;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+
+        .platforms {
+            margin-left: 0.3rem;
+        }
+
+        span {
+            width: 100%;
+            margin-top: 1rem;
+        }
+    }
+}
