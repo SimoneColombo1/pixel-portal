@@ -3,6 +3,7 @@ import axios from "axios";
 import Image from "next/image";
 import Style from "../../style/HomePage/PopularSlider.scss";
 import Slider from "react-slick";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 export default function PopularSlider() {
   const [games, setGames] = useState([]);
@@ -68,23 +69,28 @@ export default function PopularSlider() {
             {games.map((game) => {
               return (
                 <div key={game.id} className="element">
-                  <img
-                    className="image"
-                    src={
-                      game.background_image
-                        ? game.background_image
-                        : "/images/home/image_not_found.jpg"
-                    }
-                    alt={game.name}
-                  />
-
-                  <p>{game.name} </p>
-                  <span className="info">
-                    <p>
-                      Rating:
-                      {game.metacritic}
-                    </p>
-                  </span>
+                  <Link
+                    href={`/Pages/${game.id}`}
+                    key={game.id}
+                    className="link"
+                  >
+                    <img
+                      className="image"
+                      src={
+                        game.background_image
+                          ? game.background_image
+                          : "/images/home/image_not_found.jpg"
+                      }
+                      alt={game.name}
+                    />
+                    <p>{game.name} </p>
+                    <span className="info">
+                      <p>
+                        Rating:
+                        {game.metacritic}
+                      </p>
+                    </span>{" "}
+                  </Link>
                 </div>
               );
             })}

@@ -103,6 +103,15 @@
     }
 }
 
+.link {
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+        opacity: 60%;
+    }
+}
+
 
 
 @media (max-width: 768px) {

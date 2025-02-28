@@ -1,6 +1,7 @@
 "use client";
 import axios from "axios";
 import Slider from "react-slick";
+import Link from "next/link";
 import Image from "next/image";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -81,21 +82,27 @@ export default function PrimarySlider() {
             {games.map((game) => {
               return (
                 <div key={game.id} className="element">
-                  <img
-                    className="image"
-                    src={
-                      game.background_image
-                        ? game.background_image
-                        : "/images/home/image_not_found.jpg"
-                    }
-                    alt={game.name}
-                  />
+                  <Link
+                    href={`/Pages/${game.id}`}
+                    key={game.id}
+                    className="link"
+                  >
+                    <img
+                      className="image"
+                      src={
+                        game.background_image
+                          ? game.background_image
+                          : "/images/home/image_not_found.jpg"
+                      }
+                      alt={game.name}
+                    />
 
-                  <p>{game.name} </p>
-                  <span className="info">
-                    <p>Realese date:</p>
-                    <p>{game.released}</p>
-                  </span>
+                    <p>{game.name} </p>
+                    <span className="info">
+                      <p>Realese date:</p>
+                      <p>{game.released}</p>
+                    </span>
+                  </Link>
                 </div>
               );
             })}
