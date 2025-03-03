@@ -51,7 +51,10 @@ export default function Header() {
           >
             Search
           </Link>
-          <Link href="" className={pathname === "/Pages/News" ? "active" : ""}>
+          <Link
+            href="/Pages/News"
+            className={pathname === "/Pages/News" ? "active" : ""}
+          >
             News
           </Link>
         </nav>
@@ -65,9 +68,9 @@ export default function Header() {
 
         {isOpen && (
           <nav className="mobile-menu mobile-toggle links">
-            <a href="">Home</a>
-            <a href="">Search</a>
-            <a href="">News</a>
+            <Link href="/">Home</Link>
+            <Link href="/Pages/Search">Search</Link>
+            <Link href="/Pages/News">News</Link>
           </nav>
         )}
       </div>

@@ -32,7 +32,7 @@ $silver: #c0c0c0;
         width: 100%;
         display: flex;
         justify-content: center;
-        background-image: url();
+
     }
 
     .news-list {
@@ -159,6 +159,11 @@ $silver: #c0c0c0;
 
     @media (max-width: 768px) {
 
+        .news-main-container {
+            &::after {
+                display: none;
+            }
+        }
 
         .news-card {
             width: 80%;
