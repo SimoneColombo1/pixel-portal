@@ -44,7 +44,7 @@ export default function PopularSlider() {
         },
       },
       {
-        breakpoint: 576,
+        breakpoint: 640,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
