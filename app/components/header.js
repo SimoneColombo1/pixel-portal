@@ -24,12 +24,15 @@ export default function Header() {
     >
       <div className="header-container">
         <div className="logo">
-          <Image
-            src="/images/Home/small-logo.png"
-            alt="small logo"
-            width={40}
-            height={40}
-          />
+          <Link href="/">
+            {" "}
+            <Image
+              src="/images/Home/small-logo.png"
+              alt="small logo"
+              width={40}
+              height={40}
+            />
+          </Link>
         </div>
 
         <div className="extended-logo ">

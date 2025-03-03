@@ -58,10 +58,16 @@
                 height: 4rem;
                 border-radius: 2rem;
                 background-color: white;
-                color: $homeSecondary;
+
+                a {
+                    color: $homeSecondary;
+                    text-decoration: none;
+                }
+
                 border: none;
                 font-size: 2rem;
-                font-family: 'BrunoAce', sans-serif;
+                font-family: 'BrunoAce',
+                sans-serif;
 
                 &:hover {
 
