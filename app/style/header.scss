@@ -16,6 +16,13 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Carter';
+    src: url('../../public/fonts/CarterOne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
 header {
 
@@ -160,6 +167,34 @@ header {
 
         .links {
             font-family: 'Castoro', sans-serif;
+            font-size: 0.8rem;
+        }
+    }
+
+    .menu-button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin: 1rem;
+        color: white;
+    }
+
+}
+
+//?  News
+
+
+.header-news {
+    background-color: #FF0000;
+    border: none;
+
+    .header-container {
+        background-color: black;
+        border-bottom: 4px solid #FF0000;
+        border-top: #FF0000 4px solid;
+
+        .links {
+            font-family: "Carter", sans-serif;
             font-size: 0.8rem;
         }
     }

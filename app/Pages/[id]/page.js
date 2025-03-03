@@ -44,7 +44,15 @@ export default function SingleGamePage() {
 
   return (
     <section className="container">
-      <main className={pathname === "/" ? "home" : "Search"}>
+      <main
+        className={
+          pathname === "/"
+            ? "home"
+            : pathname === "/Pages/News"
+            ? "news"
+            : "Search"
+        }
+      >
         <section className="game-main">
           <Screenshots key={screenshots.length} screenshots={screenshots} />
           <Content game={game} />

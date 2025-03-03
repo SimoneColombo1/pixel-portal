@@ -135,6 +135,24 @@ footer {
 
 }
 
+//? News
+.footer-news {
+
+    border-top: 4px solid $NewsPrimary;
+
+    hr {
+        color: $NewsPrimary;
+    }
+
+    .links {
+        color: $NewsPrimary;
+
+        &::after {
+            background-color: $NewsPrimary;
+        }
+    }
+
+}
 
 @media (max-width: 768px) {
 

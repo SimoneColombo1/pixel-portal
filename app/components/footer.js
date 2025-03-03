@@ -35,9 +35,17 @@ export default function Footer() {
       ? "/images/Home/jinx_pow_pow.png"
       : pathname === "/Pages/Search"
       ? "/images/Search/Gofrrey.png"
+      : pathname === "/Pages/News"
+      ? "/images/News/dante.png"
       : "/images/Search/Gofrrey.png";
   const FooterSizeWidth =
-    pathname === "/" ? "450" : pathname === "/Pages/Search" ? "250" : "250";
+    pathname === "/"
+      ? "450"
+      : pathname === "/Pages/Search"
+      ? "250"
+      : pathname === "/Pages/News"
+      ? "350"
+      : "250";
 
   return (
     <footer
@@ -46,6 +54,8 @@ export default function Footer() {
           ? "footer-home"
           : pathname === "/Pages/Search"
           ? "footer-search"
+          : pathname === "/Pages/News"
+          ? "footer-news"
           : "footer-search"
       }`}
     >

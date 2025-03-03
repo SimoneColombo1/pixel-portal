@@ -15,6 +15,8 @@ export default function Header() {
       className={`header ${
         pathname === "/"
           ? "header-home"
+          : pathname === "/Pages/News"
+          ? "header-news"
           : pathname === "/Pages/Search"
           ? "header-search"
           : "header-search"
