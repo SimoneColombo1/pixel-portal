@@ -46,7 +46,7 @@ export default function Jumbo() {
     <section className="jumbo-container">
       <section className="slider-container">
         <div className="jumbo-decoration">
-          <Image
+          <img
             src={"/images/home/jinx1.png"}
             alt="Jinx"
             width={200}
