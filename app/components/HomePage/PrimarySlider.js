@@ -34,7 +34,6 @@ export default function PrimarySlider() {
         `https://api.rawg.io/api/games?ordering=released&&key=cf03016e21b1461f974413b5b58a6356&&dates=${tomorrow},${nextYear}`
       );
 
-      console.log(response.data.results);
       setGames(response.data.results);
     } catch (error) {
       console.error("Errore nella richiesta:", error);

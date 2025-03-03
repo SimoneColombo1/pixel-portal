@@ -32,7 +32,6 @@ export default function Jumbo() {
         "https://newsdata.io/api/1/news?apikey=pub_69539ea318fa05efab46090d4ca4f35df175b&q=gaming&language=en&category=technology"
       );
 
-      console.log(response.data.results);
       setNews(response.data.results);
     } catch (error) {
       console.error("Errore nella richiesta:", error);

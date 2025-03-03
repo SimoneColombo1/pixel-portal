@@ -42,21 +42,21 @@ export default function Header() {
         </div>
 
         <nav className="links desktop-toggle">
-          <Link href="/" className={pathname === "/" ? "active" : ""}>
+          <a href="/" className={pathname === "/" ? "active" : ""}>
             Home
-          </Link>
-          <Link
+          </a>
+          <a
             href="/Pages/Search"
             className={pathname === "/Pages/Search" ? "active" : ""}
           >
             Search
-          </Link>
-          <Link
+          </a>
+          <a
             href="/Pages/News"
             className={pathname === "/Pages/News" ? "active" : ""}
           >
             News
-          </Link>
+          </a>
         </nav>
 
         <button

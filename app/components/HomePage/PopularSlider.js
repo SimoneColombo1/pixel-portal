@@ -13,7 +13,6 @@ export default function PopularSlider() {
         "https://api.rawg.io/api/games?metacritic=90,100&&key=cf03016e21b1461f974413b5b58a6356&&page=1"
       );
 
-      console.log(response.data.results);
       setGames(response.data.results);
     } catch (error) {
       console.error("Errore nella richiesta:", error);
