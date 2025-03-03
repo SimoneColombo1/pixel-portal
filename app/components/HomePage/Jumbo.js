@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import Style from "../../style/HomePage/jumbo.scss";
 import { useEffect, useState } from "react";

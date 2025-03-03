@@ -1,4 +1,3 @@
-"use client";
 import axios from "axios";
 import Slider from "react-slick";
 import Link from "next/link";
