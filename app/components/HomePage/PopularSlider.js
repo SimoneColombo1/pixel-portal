@@ -55,7 +55,7 @@ export default function PopularSlider() {
   return (
     <section className="popular-slider">
       <section className="container">
-        <Image
+        <img
           src={"/images/home/pow_pow.png"}
           alt="pow pow"
           width={190}
