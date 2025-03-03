@@ -11,12 +11,6 @@ import style from "../../style/Game/screenshots.scss";
 export default function Screenshots({ screenshots }) {
   const [sliderKey, setSliderKey] = useState(0);
 
-  useEffect(() => {
-    setSliderKey((prevKey) => prevKey + 1);
-  }, [screenshots]);
-  if (screenshots.length === 0) {
-    return <p>Loading screenshots...</p>;
-  }
   const settings = {
     dots: true,
     infinite: true,
@@ -34,7 +28,14 @@ export default function Screenshots({ screenshots }) {
       },
     ],
   };
-
+  useEffect(() => {
+    if (screenshots.length > 0) {
+      setSliderKey((prevKey) => prevKey + 1);
+    }
+  }, [screenshots]);
+  useEffect(() => {
+    setSliderKey((prevKey) => prevKey + 1);
+  }, [screenshots]);
   return (
     <section className="screenshots-container">
       <Slider key={sliderKey} {...settings} className="slider">
