@@ -10,6 +10,10 @@ import { useRef } from "react";
 import style from "../../style/Game/screenshots.scss";
 export default function Screenshots({ screenshots }) {
   const [sliderKey, setSliderKey] = useState(0);
+
+  useEffect(() => {
+    setSliderKey((prevKey) => prevKey + 1);
+  }, [screenshots]);
   if (screenshots.length === 0) {
     return <p>Loading screenshots...</p>;
   }
@@ -30,9 +34,7 @@ export default function Screenshots({ screenshots }) {
       },
     ],
   };
-  useEffect(() => {
-    setSliderKey((prevKey) => prevKey + 1);
-  }, [screenshots]);
+
   return (
     <section className="screenshots-container">
       <Slider key={sliderKey} {...settings} className="slider">
