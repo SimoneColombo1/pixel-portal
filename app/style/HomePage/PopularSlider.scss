@@ -156,3 +156,19 @@
         }
     }
 }
+
+@media (max-width: 414px) {
+
+    .popular-slider {
+        .slider-container {
+            .slider {
+                div {
+
+                    width: 100%;
+
+
+                }
+            }
+        }
+    }
+}

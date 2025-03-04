@@ -138,3 +138,24 @@
         }
     }
 }
+
+@media (max-width: 414px) {
+    .search-form {
+        width: 90%;
+
+        .first-search {
+            font-size: 0.8rem;
+            display: flex;
+            flex-wrap: wrap;
+
+            input {
+                width: 100%;
+            }
+
+            .dropdown {
+
+                width: 40%;
+            }
+        }
+    }
+}

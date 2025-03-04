@@ -211,3 +211,31 @@
 
 
 }
+
+@media (max-width: 414px) {
+    .jumbo-container {
+
+
+        .jumbo {
+
+            width: 100%;
+            height: 10rem;
+
+            .title {
+                margin: 0;
+                padding: 0.4rem;
+
+                span {
+                    display: none;
+                }
+
+
+                h1 {
+                    font-size: 0.6rem;
+                }
+            }
+        }
+    }
+
+
+}

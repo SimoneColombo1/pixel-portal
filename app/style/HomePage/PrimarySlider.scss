@@ -162,3 +162,22 @@
         }
     }
 }
+
+@media (max-width: 576px) {
+    .title {
+        margin-left: 2rem;
+    }
+
+    .primary-slider-container {
+        .slider-container {
+            .slider {
+                div {
+
+                    width: 100%;
+
+
+                }
+            }
+        }
+    }
+}
