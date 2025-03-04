@@ -46,9 +46,9 @@ export default function Search() {
       const dates = year ? year.replace(",", "-") : "2020-01-01,2025-12-31";
       const metacriticRange = metacritic ? `${metacritic},100` : "50,100";
 
-      let url = `https://api.rawg.io/api/games?key=cf03016e21b1461f974413b5b58a6356&metacritic=${metacriticRange}&dates=${dates}&oredering=-metacritic`;
+      let url = `https://api.rawg.io/api/games?key=cf03016e21b1461f974413b5b58a6356&metacritic=${metacriticRange}&dates=${dates}&oredering=-metacritic&search=${getTitle}`;
 
-      if (getTitle) url += `&search=${getTitle}`;
+      if (getTitle) url += ``;
       if (genresString) url += `&genres=${genresString}`;
 
       console.log("API Request URL:", url);

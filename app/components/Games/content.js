@@ -22,7 +22,6 @@ export default function Content({ game }) {
             Platforms:
             {game.platforms.map((platform, index) => (
               <span className="platforms" key={platform.platform.name}>
-                {" "}
                 {platform.platform.name}
                 {index < game.platforms.length - 1 ? " - " : ""}
               </span>

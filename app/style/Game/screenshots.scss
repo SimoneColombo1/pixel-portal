@@ -6,61 +6,69 @@
     width: 100%;
     padding: 2rem;
     overflow: hidden;
+
+
+    .slider-container {
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .slider {
+        display: flex;
+        width: 100%;
+        flex-wrap: nowrap;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .screenshot {
+        display: flex;
+        height: 20rem;
+        min-width: 100%;
+
+    }
+
+    .image {
+        display: flex;
+        align-items: center;
+
+        img {
+
+            width: 60%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    }
+
+    .prevButton,
+    .nextButton {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        background-color: #123434;
+        border: none;
+        cursor: pointer;
+        padding: 10px 15px;
+        font-size: 20px;
+        border-radius: 50%;
+        z-index: 10;
+
+
+    }
+
+    .prevButton {
+        left: 8px;
+
+    }
+
+    .nextButton {
+        right: 8px;
+
+    }
+
 }
-
-.slider-container {
-    display: flex;
-    overflow: hidden;
-    width: 70%;
-}
-
-.slider {
-    display: flex;
-    width: 100%;
-    flex-wrap: nowrap;
-    transition: transform 0.5s ease-in-out;
-}
-
-.screenshot {
-    display: flex;
-    height: 20rem;
-    min-width: 100%;
-}
-
-.image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
-.prevButton,
-.nextButton {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-
-    background-color: #123434;
-    border: none;
-    cursor: pointer;
-    padding: 10px 15px;
-    font-size: 20px;
-    border-radius: 50%;
-    z-index: 10;
-
-
-}
-
-.prevButton {
-    left: 8px;
-
-}
-
-.nextButton {
-    right: 8px;
-
-}
-
 
 @media (max-width: 768px) {
     .screenshots-container {
