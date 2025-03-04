@@ -54,7 +54,7 @@ export default function SingleGamePage() {
         }
       >
         <section className="game-main">
-          <Screenshots key={screenshots.length} screenshots={screenshots} />
+          <Screenshots key={screenshots.length} screenshots={id} />
           <Content game={game} />
         </section>
       </main>
